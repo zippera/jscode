@@ -21,5 +21,22 @@ function bubbleSort(myArray){
 }
 
 var myA = [1,4,2,8,3,9]
-console.log(bubbleSort(myA))
+//console.log(bubbleSort(myA))
 
+//mine
+function bubblesort(lst){
+    var l = lst.length;
+    while(l>1){
+        for (var i = 0;i<l;i++){
+            if (lst[i] > lst[i+1]){
+                var temp = lst[i+1];
+                lst[i+1] = lst[i];
+                lst[i] = temp;
+            }
+        }
+        l -= 1;
+    }
+    return lst;
+}
+var myArray = [1,4,2,8,3,9]
+console.log(bubblesort(myArray));
